@@ -1,4 +1,5 @@
-import 'package:codepur/home_page.dart';
+import 'package:codepur/pages/home_page.dart';
+import 'package:codepur/pages/login_page.dart';
 import 'package:flutter/material.dart' ;
 
 void main() {
@@ -10,11 +11,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    const int days = 30;
-
-    return  const MaterialApp(
-      home: HomePage(),
+    return  MaterialApp(
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      initialRoute: '/home',
+      routes: {
+        "/" : (context) => const LoginPage(), //  this means home route in place
+        "/home" : (context) => const HomePage(), // this is the home page route
+        "/login" : (context) => const LoginPage(), // this is the login page route
+      },
     );
   }
 }
