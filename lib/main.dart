@@ -3,7 +3,7 @@ import 'package:codepur/pages/login_page.dart';
 import 'package:codepur/utils/routes.dart';
 import 'package:flutter/material.dart' ;
 import 'package:google_fonts/google_fonts.dart';
-// github access token: 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
+// github access token: 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
 void main() {
   runApp(const MyApp());
 }
