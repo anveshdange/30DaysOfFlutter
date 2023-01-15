@@ -1,5 +1,6 @@
 import 'package:codepur/pages/home_page.dart';
 import 'package:codepur/pages/login_page.dart';
+import 'package:codepur/utils/routes.dart';
 import 'package:flutter/material.dart' ;
 import 'package:google_fonts/google_fonts.dart';
 // github access token: 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
@@ -19,14 +20,15 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme() ,
       ),
+      // debugShowCheckedModeBanner: false, // this line of code is used to remove the debug logo in development
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
       initialRoute: '/',
       routes: {
         "/" : (context) => const LoginPage(), //  this means home route in place
-        "/home" : (context) => const HomePage(), // this is the home page route
-        "/login" : (context) => const LoginPage(), // this is the login page route
+        MyRoutes.homeRoute : (context) => const HomePage(), // this is the home page route
+        MyRoutes.loginRoute : (context) => const LoginPage(), // this is the login page route
       },
     );
   }
