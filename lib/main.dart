@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme() ,
       ),
-      // debugShowCheckedModeBanner: false, // this line of code is used to remove the debug logo in development
+      debugShowCheckedModeBanner: false, // this line of code is used to remove the debug logo in development
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
         "/" : (context) => const LoginPage(), //  this means home route in place
         MyRoutes.homeRoute : (context) => const HomePage(), // this is the home page route
